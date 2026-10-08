@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Career Navigator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>AI Career Navigator</h1>
+    <p>Personalized Job Path & Skill Gap Assistant</p>
+  </div>
+  <span class="badge">SDG 8</span>
+</header>
+
+<main>
+<section class="card">
+<h2>1. Your Profile</h2>
+<div class="grid">
+<label>Name<input id="name" placeholder="Your name"></label>
+<label>Education<input id="education" placeholder="e.g. B.Tech"></label>
+<label>Preferred role
+<select id="interest">
+<option>Java Backend</option><option>Full Stack Development</option>
+<option>Data Analyst</option><option>Frontend Development</option>
+</select></label>
+<label>Location<input id="location" placeholder="e.g. Bhopal"></label>
+</div>
+<h3>Select your current skills</h3>
+<div class="skills">
+<label><input type="checkbox" value="Java"> Java</label>
+<label><input type="checkbox" value="Python"> Python</label>
+<label><input type="checkbox" value="SQL"> SQL</label>
+<label><input type="checkbox" value="HTML/CSS"> HTML/CSS</label>
+<label><input type="checkbox" value="JavaScript"> JavaScript</label>
+<label><input type="checkbox" value="React"> React</label>
+<label><input type="checkbox" value="Spring Boot"> Spring Boot</label>
+<label><input type="checkbox" value="Git"> Git</label>
+</div>
+<button onclick="analyze()">Analyze My Career Path</button>
+</section>
+
+<section id="result" class="card hidden">
+<h2>2. AI Career Analysis</h2>
+<div id="summary"></div>
+<div class="result-grid">
+<div><h3>Best-fit roles</h3><div id="roles"></div></div>
+<div><h3>Priority skill gaps</h3><div id="gaps"></div></div>
+</div>
+<h3>Personalized roadmap</h3>
+<ol id="roadmap"></ol>
+</section>
+</main>
+
+<footer>Educational prototype — recommendations are guidance, not a guarantee of employment.</footer>
+<script src="app.js"></script>
+</body>
+</html>
